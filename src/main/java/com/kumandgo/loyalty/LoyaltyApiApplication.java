@@ -1,15 +1,24 @@
-package com.kumandgo.loyaltyapi;
+package com.kumandgo.loyalty;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@ComponentScan
 @SpringBootApplication
-public class LoyaltyApiApplication
+@EnableSwagger2
+public class LoyaltyApiApplication implements CommandLineRunner
 {
 
     public static void main(String[] args)
     {
         SpringApplication.run(LoyaltyApiApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
     }
 
 }

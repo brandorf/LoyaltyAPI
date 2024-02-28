@@ -1,8 +1,13 @@
-package com.kumandgo.loyaltyapi.data;
+package com.kumandgo.loyalty.data;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.util.Date;
 
+@Entity
 public class LoyaltyRecord {
+    @Id
     public int PXUSER_ID;
     public String FIRST_NAME;
     public String MIDDLE_INITIAL;
