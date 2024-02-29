@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
     public interface LoyaltyRepository extends CrudRepository<LoyaltyRecord, Integer> {
 
-        @Query(value = "SELECT STUDENT_ID as \"student_id\", STUDENT_NAME as \"student_name\", CLASS_ID as \"class_id\" FROM STUDENT WHERE STUDENT_ID = ?", nativeQuery = true)
+        @Query(value = "SELECT * from \"PX_SHARE\".\"M837\".\"M837_PXUSER\" WHERE \"PXUSER_ID\" = ?", nativeQuery = true)
         LoyaltyRecord findLoyaltyById(int studentId);
 
     }

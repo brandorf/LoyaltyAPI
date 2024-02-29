@@ -15,7 +15,7 @@ public interface LoyaltyApi {
 
     @ApiOperation(value = "", response = LoyaltyRecord.class, tags = {"Loyalty",})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "A successful student record", response = LoyaltyRecord.class)})
-    @RequestMapping(value = "/loyaltyt", produces = {"application/json"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/loyalty", produces = {"application/json"}, method = RequestMethod.GET)
     ResponseEntity<LoyaltyRecord> getLoyaltyById(
             @RequestParam("loyaltyId")
             Integer studentId);
